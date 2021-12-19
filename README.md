@@ -108,6 +108,8 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- ABOUT THE Data -->
 ## About The Data
 
+as an alternative we can use https://www.kaggle.com/piotrgrabo/breastcancerproteomes?select=77_cancer_proteomes_CPTAC_itraq.csv
+
 Read this before working with the data!
 
 
