@@ -1,7 +1,39 @@
-#data
-raw.xls is the raw output from a FAIMS-TOF-MS measurment. 
+################################################
+		    Data
+################################################
+
+Read this before working with the data!
 
 
+the folder data/ includes the following:
+
+- raw.xls
+--> raw data which needs to be processed (with python). The size is roughly 550 mb which will end in way less. raw.xls is the raw output from a FAIMS-TOF-MS measurment. 
+
+
+- tidy.csv
+--> The processed output of raw.xls. We can already built our model with this file. The features shortly explained
+	R.FileName 	= The sample identifier. Each entry corresponse to an individual patient.
+	uniprot 	= The uniprot accession number of the protein.
+	proteinName	= The protein Name (one Name can have multiple Uniprot numbers but not in this dataset)
+	Group		= The health status of the patients. Is either Healthy or a different kind of cancer.
+	fastaSequence	= The protein Aminoacid sequence. 
+	meanAbu		= The mean Abundance (equivalent to concetration) of each protein. It may varry between patients
+	log10meanAbu	= log10(meanAbu)
+	stdDev		= standard deviation of meanAbu (But is not needed due to the single measurment per patient)
+	relStdDev	= coefficient of variation (relative standardabweichung) of meanAbu (But is not needed due to the single measurment per patient)
+	Rank		= Rank position of the proteins for each patient (Ascending)
+
+- raw2tidy.R 
+--> an R script to directly transform raw.xls to tidy.csv. Can be translated into python. Use the package data.table for a super fast read in of raw.xls.
+    It may take 1-4 minutes depending on your computer speed
+
+- metadata.csv 
+--> is used by raw2tidy.R, includes information about patient, column used etc
+
+- proteinSeqInfoExt.csv
+--> is used by raw2tidy.r, includes feature infos about the proteins like sequence, physikochemical etc..
+################################################
 
 # Github Client
 https://cli.github.com/manual/
