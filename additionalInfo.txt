@@ -1,0 +1,16 @@
+#data
+raw.xls is the raw output from a FAIMS-TOF-MS measurment. 
+
+
+
+# Github Client
+https://cli.github.com/manual/
+https://www.youtube.com/watch?v=vcAIZ4axYZU
+
+
+# Handling large files with github
+https://git-lfs.github.com/
+--> show which file types use most space
+	git lfs migrate info
+--> migrate these big files into github lfs
+	git lfs migrate import --include="*.xls, *.zip, *.xz.tar"
