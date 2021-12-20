@@ -70,3 +70,31 @@ summaryAll = summaryAll %>%
     dplyr::mutate(Rank=rank(-meanAbu, na.last="keep"))
                    
 fwrite(summaryAll, file= "becs2.csv")
+
+################3 comparison healthy tumor  ###########################
+
+# Not finished yet 
+
+vulcano_group = depleted %>%
+  dplyr::group_by(uniprot, proteinName, Group) %>%
+  dplyr::summarise(meanAbu = mean(PG.Quantity),
+                   log10meanAbu = log10(mean(PG.Quantity)),
+                   foldChange=mean(PG.Quantity[status=="depleted"]) / mean(PG.Quantity[status=="native"]),
+                   Log2FoldChange=log2(mean(PG.Quantity[status=="depleted"]) / mean(PG.Quantity[status=="native"])),
+                   stdDev = sd(PG.Quantity),
+                   relStdDev = sd(PG.Quantity) / mean(PG.Quantity),
+                   pvalueC1=tryCatch({t.test(PG.Quantity[status=="native"], PG.Quantity[status=="depleted"])$p.value},error=function(i){NA})) %>%
+  dplyr::mutate(Rank=rank(-meanAbu, na.last="keep"))
+
+vulcano_group = vulcano_group %>%
+  left_join(plasmaprot[c("uniprot", "conc_thpa_ugl", "mars14", "sepromix20")], by=c("uniprot")) %>%
+  replace_na(list(mars14=0, sepromix20=0)) %>%
+  arrange(Rank) %>% 
+  as.data.frame()
+
+vulcano_group = vulcano_group %>%
+  dplyr::mutate(RankFC = rank(Log2FoldChange, na.last="keep")) %>% #Make rank for log2(foldchange) and na.last = keep --> NA instead of rank nr for na's
+  dplyr::mutate(RankQ = ntile(desc(RankFC),60))   
+
+
+fwrite(vulcano_group, "vulcano_group.csv")
