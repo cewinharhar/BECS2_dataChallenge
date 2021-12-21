@@ -39,6 +39,8 @@
 The aim of the project work is to work independently on a project, which involves researching a topic, analyzing and visualizing data, developing machine learning models with the tool covered in the course (mainly scikit-learn) and discussing the results.
 
 The project can be done by single persons or in teams of up to four people.
+    
+    *DEADLINE TO HAND IN THE PROJECT WORK: 12.01.2022*
 
 
 <!--
@@ -141,6 +143,11 @@ the folder data/ includes the following:
 
 ### proteinSeqInfoExt.csv
 --> is used by raw2tidy.r, includes feature infos about the proteins like sequence, physikochemical etc..
+
+## Format
+
+Present your work in a Jupyter notebook. It should include the code, visualizations of results and descriptions of your analysis plan, modeling process and discussion of the results (You may split it into several notebooks if you prefer.).
+
 
 ### Built With
 
