@@ -107,6 +107,42 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+## Machine learning workflow
+
+#### Define Problem Statement
+* Can we predict the health status of a patient by the protein fingerprint?
+
+#### Gather Data
+* Avalable
+
+#### Pre-process Data
+* Data cleanup
+* Data Imputation
+* Drop
+
+#### Analyze Data
+* Correlations
+* Features of importance
+* Type of problem
+
+#### Prepare Data
+* Transform
+* Normalize
+* Drop
+
+#### Evaluate Model
+* Train/Test
+* Classify/Regress
+* Feature reduction
+
+#### Tune Model
+* Cross validate
+* Fine tune parameters / Hyperparamether tuning
+* Analyze results
+
+#### Accept / reject Hypothesis
+
 <!-- ABOUT THE Data -->
 ## About The Data
 
