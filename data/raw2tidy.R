@@ -5,17 +5,17 @@ library(tidyr)
 
 
 ############################################
-uniprotScrape <- read.delim("20211129-144739_proteinSeqInfoExt.csv", sep=",", row.names = 1) %>% 
+uniprotScrape <- read.delim("proteinSeqInfoExt.csv", sep=",", row.names = 1) %>% 
   subset(select = -c(organism))
 
 metadata <- read.delim("metadata.csv", sep="\t")
 
-
+su <- read.delim("_GITHUB/BECS2_dataChallenge/data/tidy.csv", sep=",")
 
 ##---------------------------------------------------------------------------------------##
 ## -----------------------------   Depleted PREPARATION    ----------------------------- ##
 ##---------------------------------------------------------------------------------------##
-depleted_raw <- fread("S:/Ana/2021/821_Depletion_Panel_Designer_DPD/IP_726/depleted_report/20211027_124634_ip726_depleted/Depleted_Report_EDA_KMY.xls", sep="\t") %>%
+depleted_raw <- fread("raw.xls", sep="\t") %>%
   transform(PG.MolecularWeight = as.numeric(PG.MolecularWeight)) %>%  #molecular weight to numeric
   separate_rows(PG.UniProtIds, sep=";")  %>% #seperate multiple uniprot entries 
       arrange(desc(PG.Quantity)) 
