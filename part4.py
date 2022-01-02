@@ -7,6 +7,7 @@
 * Model Selection
 
 """
+os.chdir(r"C:\Users\kevin\OneDrive - ZHAW\KEVIN STUFF\ZHAW\_PYTHON_R\_GITHUB\BECS2_dataChallenge")
 
 #Make pipeline
 dataPrepPipe = Pipeline([
