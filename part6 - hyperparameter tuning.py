@@ -17,6 +17,9 @@ from sklearn.metrics import classification_report, accuracy_score
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import joblib
 import part5
+
+
+
 X_train, X_test, y_train, y_test = joblib.load("Models/X_y_split.pkl")
 
 #Hyperparameter tuning for the random forest classifier using random grid search
@@ -126,18 +129,29 @@ RF_random.fit(X_train, y_train)
 RF_random.best_params_
 
 
-params = {'n_estimators': 114, 'min_samples_split': 2, 'max_features': 'auto', 'max_depth': 18, 'bootstrap': False} # acc: 0.6363
+params  = {'n_estimators': 114, 'min_samples_split': 2, 'max_features': 'auto', 'max_depth': 18, 'bootstrap': False}  #<-- WINNER
+# acc: 0.672 without GA random state = 0 or 6 or 8
+# acc: 0.616 with GA random state = 3
 
-clf_RF = RandomForestClassifier(**params)
+params  = {'n_estimators': 500, 'min_samples_split': 10, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False} 
+# acc: 0.654 without GA random state = 0
+
+params  = {'n_estimators': 600, 'min_samples_split': 2, 'max_features': 'auto', 'max_depth': 18, 'bootstrap': False} 
+# acc: 0.654 without GA random state = 3 (GA = genetic algorithm feature selection)
+
+
+clf_RF = RandomForestClassifier(**params, random_state=0)
+
 clf_RF.fit(X_train, y_train) 
 
 y_RFpred = clf_RF.predict(X_test)
+print("Accuracy Random Forest: ",metrics.accuracy_score(y_test , y_RFpred))
 
-joblib.dump(clf_RF, "Models/clf_RF_hypertuned.pkl")
-
-# Model Accuracy, how often is the classifier correct?\n,
+# Model Accuracy, how often is the classifier correct?
 print("Accuracy Random Forest: ",metrics.accuracy_score(y_test , y_RFpred))
 print(classification_report(y_test, y_RFpred))
 
+
+joblib.dump(clf_RF, "Models/clf_RF_hypertuned_selFeature.pkl")
 #--------------------------  XGBOOST  ------------------------------------
 

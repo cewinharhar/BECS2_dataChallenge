@@ -105,7 +105,9 @@ params = dict(tree_method="exact",
 clf_XGRF = xgboost.XGBClassifier(random_state=7, **params)
 model = SequentialFeatureSelector(estimator = clf_XGRF, n_features_to_select = 0.20, cv = 10,  n_jobs=-1)
 model.fit(X,y)
+
 X_new = model.transform(X)
+
 #checkout importance in a histogram
 plt.hist(raFo.feature_importances_, bins=100)
 
@@ -124,32 +126,19 @@ evolved_estimator = GAFeatureSelectionCV(
     population_size=30, 
     generations =40,
     crossover_probability=0.8,
-    mutation_probabilityfloat = 0.1,
+    mutation_probability = 0.1,
     n_jobs      =-1,
-    scoring     = "accuracy"
-    )
+    scoring     = "accuracy")
 
 # Train and select the features
-evolved_estimator.fit(X_train, y_train)
+evolved_estimator.fit(X, y)
 
 # Features selected by the algorithm
 features= evolved_estimator.best_features_
-X_GA    = X_test[:, features]
 
-y_predict_RA_GA = evolved_estimator.predict(X_GA)
+X_GA    = X[:, features]
 
-print(accuracy_score(y_test, y_predict_RA_GA))
-
-
-
-
-
-
-
-
-
-
-
+joblib.dump(X_GA, "Models/X_GA.pkl")
 
 
 
