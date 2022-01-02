@@ -32,7 +32,7 @@ dataPrepPipe = Pipeline([
     ]) 
 
 #X is already purely numerical
-X = dataPrepPipe.fit_transform(X_data)
+X = dataPrepPipe.fit_transform(X_)
 
 # Encode target labels
 labEnc = preprocessing.LabelEncoder() 
