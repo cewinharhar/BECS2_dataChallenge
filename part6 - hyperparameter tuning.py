@@ -129,7 +129,8 @@ RF_random.fit(X_train, y_train)
 RF_random.best_params_
 
 
-params = {'n_estimators': 114, 'min_samples_split': 2, 'max_features': 'auto', 'max_depth': 18, 'bootstrap': False} # acc: 0.6363
+params  = {'n_estimators': 114, 'min_samples_split': 2, 'max_features': 'auto', 'max_depth': 18, 'bootstrap': False} # acc: 0.6363
+params  = {'n_estimators': 500, 'min_samples_split': 10, 'max_features': 'sqrt', 'max_depth': 7, 'bootstrap': False} # acc: 0.55
 
 clf_RF = RandomForestClassifier(**params)
 clf_RF.fit(X_train, y_train) 

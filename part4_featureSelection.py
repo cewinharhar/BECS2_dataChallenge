@@ -141,16 +141,6 @@ X_GA    = X[:, features]
 joblib.dump(X_GA, "Models/X_GA.pkl")
 
 
-
-
-
-
-
-
-
-
-
-
 # Visualize feature importance
 
 importances = raFo.feature_importances_
