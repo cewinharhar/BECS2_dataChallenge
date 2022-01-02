@@ -32,7 +32,7 @@ dataPrepPipe = Pipeline([
     ]) 
 
 #X is already purely numerical
-X = dataPrepPipe.fit_transform(X_)
+X = dataPrepPipe.fit_transform(X_data)
 
 # Encode target labels
 labEnc = preprocessing.LabelEncoder() 
@@ -139,6 +139,7 @@ X_GA    = X_test[:, features]
 y_predict_RA_GA = evolved_estimator.predict(X_GA)
 
 print(accuracy_score(y_test, y_predict_RA_GA))
+
 
 
 
