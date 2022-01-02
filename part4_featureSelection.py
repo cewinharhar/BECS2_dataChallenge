@@ -7,10 +7,23 @@
 * Model Selection
 
 """
-os.chdir(r"C:\Users\kevin\OneDrive - ZHAW\KEVIN STUFF\ZHAW\_PYTHON_R\_GITHUB\BECS2_dataChallenge")
-
+import os
+import numpy as np
+from sklearn import metrics
+from sklearn import preprocessing
+from sklearn.pipeline import Pipeline
+from sklearn.impute import SimpleImputer
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import RandomizedSearchCV
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.feature_selection import SelectFromModel
+from sklearn.feature_selection import SequentialFeatureSelector 
+from sklearn.metrics import classification_report, accuracy_score
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+import joblib
 from sklearn_genetic import GAFeatureSelectionCV
-
+import part1
 #-----------------------  Inputing  / Encoder  -----------------------------------
 
 #Make pipeline
@@ -111,9 +124,10 @@ evolved_estimator = GAFeatureSelectionCV(
     population_size=30, 
     generations =40,
     crossover_probability=0.8,
-    mutation_probabilityfloat = 0.1
+    mutation_probabilityfloat = 0.1,
     n_jobs      =-1,
-    scoring     = "accuracy",)
+    scoring     = "accuracy"
+    )
 
 # Train and select the features
 evolved_estimator.fit(X_train, y_train)
