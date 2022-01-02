@@ -119,7 +119,12 @@ evolved_estimator = GAFeatureSelectionCV(
 evolved_estimator.fit(X_train, y_train)
 
 # Features selected by the algorithm
-features = evolved_estimator.best_features_
+features= evolved_estimator.best_features_
+X_GA    = X_test[:, features]
+
+y_predict_RA_GA = evolved_estimator.predict(X_GA)
+
+print(accuracy_score(y_test, y_predict_RA_GA))
 
 
 
