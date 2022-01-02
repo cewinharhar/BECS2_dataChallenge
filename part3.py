@@ -3,6 +3,7 @@
 In this section the raw data is prepared and reshaped to be fed into the different models. Furhtermore, the distribution of the input data is visualized to check if the data set is balanced. The data is converted into two main variables X (patiens and the coresponding protein quantities) and y (patients and the coresponding healt condition).
 
 """
+import pandas as pd
 
 #create pandas dataframe
 path = "tidy.csv"

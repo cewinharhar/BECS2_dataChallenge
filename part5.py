@@ -2,7 +2,24 @@
 ## Part 5: Model Training
 
 """
-
+import numpy as np
+from sklearn import metrics
+from sklearn import preprocessing
+from sklearn.pipeline import Pipeline
+from sklearn.impute import SimpleImputer
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import RandomizedSearchCV
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.feature_selection import SelectFromModel
+from sklearn.feature_selection import SequentialFeatureSelector 
+from sklearn.metrics import classification_report, accuracy_score
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+import joblib
+import part4_featureSelection
+import part3
+import part2
+import part1
 # import already trained model if needed
 
 clf_RF = joblib.load("Models/clf_RF_X_new.pkl")
