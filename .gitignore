@@ -1,2 +1,6 @@
 /rawDataBig
 MLworkflowBig.ipynb
+__pycache__/part1.cpython-39.pyc
+__pycache__/part5.cpython-39.pyc
+__pycache__/part4_featureSelection.cpython-39.pyc
+.DS_Store
