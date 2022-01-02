@@ -77,7 +77,7 @@ clf_RF = RandomForestClassifier()
 #params\n,
 
 #Define hyperparameters for tuning\n,
-n_estimators_RF = [x for x in np.linspace(start=50, stop=500, num=10, dtype=int)] #number of trees
+n_estimators_RF = [x for x in np.linspace(start=50, stop=500, num=15, dtype=int)] #number of trees
 criterion_RF    = ["gini", "entropy"]
 
 max_depth_RF = [int(x) for x in np.arange(1, 20)] #numbber of levels
@@ -102,15 +102,14 @@ random_grid = {'n_estimators'   : n_estimators_RF,
 
 #define model parameters for random grid search
 RF_random = RandomizedSearchCV(estimator = clf_RF,
-            param_distributions=random_grid, n_iter=100,
-            cv=5, verbose=0, n_jobs=-1)
+            param_distributions=random_grid, n_iter=200,
+            cv=7, verbose=0, n_jobs=-1)
 
 #fit the random search model
 RF_random.fit(X_train, y_train)
 
 #get best hyperparameters from the model
-RF_random.best_params
-
+RF_random.best_params_
 
 
 params = {'n_estimators': 350,
@@ -118,6 +117,12 @@ params = {'n_estimators': 350,
     'max_features': 'sqrt',
     'max_depth': None,
     'bootstrap': False}
+
+params = {'n_estimators': 150, 
+            'min_samples_split': 5, 
+            'max_features': 'sqrt', 
+            'max_depth': 12, 
+            'bootstrap': False}
 
 clf_RF = RandomForestClassifier(**params)
 clf_RF.fit(X_train, y_train) 
@@ -127,3 +132,6 @@ y_RFpred = clf_RF.predict(X_test)
 # Model Accuracy, how often is the classifier correct?\n,
 print("Accuracy Random Forest: ",metrics.accuracy_score(y_test , y_RFpred))
 print(classification_report(y_test, y_RFpred))
+
+#--------------------------  XGBOOST  ------------------------------------
+
