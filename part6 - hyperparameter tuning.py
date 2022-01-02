@@ -20,7 +20,7 @@ import part5
 
 
 
-X_train, X_test, y_train, y_test = joblib.load("Models/X_y_split.pkl")
+X_train, X_test, y_train, y_test = joblib.load("Models/X_y_split_GA.pkl")
 
 #Hyperparameter tuning for the random forest classifier using random grid search
 #get model parameters(delete after hyperparameter tuning)

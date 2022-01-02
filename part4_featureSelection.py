@@ -139,10 +139,6 @@ features= evolved_estimator.best_features_
 X_GA    = X[:, features]
 
 joblib.dump(X_GA, "Models/X_GA.pkl")
-y_predict_RA_GA = evolved_estimator.predict(X_GA)
-
-print(accuracy_score(y_test, y_predict_RA_GA))
-
 
 
 

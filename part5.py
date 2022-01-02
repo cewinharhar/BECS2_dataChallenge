@@ -32,6 +32,7 @@ X_train, X_test, y_train, y_test = train_test_split(X_new, y, test_size=0.3, ran
 joblib.dump([X_train, X_test, y_train, y_test], "Models/X_y_split.pkl")
 
 
+
 #Ranadom forest
 
 clf_RF = RandomForestClassifier(random_state=1)
