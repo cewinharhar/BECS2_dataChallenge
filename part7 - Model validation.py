@@ -1,7 +1,8 @@
 """
 ## Part 7: Model Validation
 """
-clf_RF = joblib.load("Models/clf_RF_hypertuned.pkl")
+clf_RF = joblib.load("Models/clf_RF_hypertuned_selFeature.pkl")
+
 clf_XBRF = joblib.load("Models/clf_XGRF_X_new.pkl")
 
 # visualize confusion matrix
