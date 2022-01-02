@@ -9,6 +9,10 @@
 """
 os.chdir(r"C:\Users\kevin\OneDrive - ZHAW\KEVIN STUFF\ZHAW\_PYTHON_R\_GITHUB\BECS2_dataChallenge")
 
+from sklearn_genetic import GAFeatureSelectionCV
+
+#-----------------------  Inputing  / Encoder  -----------------------------------
+
 #Make pipeline
 dataPrepPipe = Pipeline([
     ('imputer', SimpleImputer(strategy='median')),
@@ -30,6 +34,11 @@ joblib.dump(X, "Models/X.pkl")
 y = joblib.load("Models/y.pkl")
 X = joblib.load("Models/X.pkl")
 
+
+
+#----------------------------------------------------------------------------
+#                       Feature Selection                          
+#----------------------------------------------------------------------------
 """
 ## Feature selection
 
@@ -43,9 +52,8 @@ X = joblib.load("Models/X.pkl")
 
 
 #----------------------------------------------------------------------------
-# Tree Feature Selection                          
-#----------------------------------------------------------------------------
- 
+#                        Tree Feature Selection                          
+
 
 """
 Can be used in pipeline
@@ -55,7 +63,7 @@ clf = Pipeline([
 ])
 """
 #create Random Forest classifier with default hyperparameters
-raFo = RandomForestClassifier(random_state=1)
+raFo = RandomForestClassifier(random_state=4)
 raFo = raFo.fit(X, y)
 
 #checkout importance in a histogram
@@ -73,9 +81,9 @@ print(f"Original X shape: {X.shape}")
 print(f"Feature selected X_new shape: {X_new.shape}")
 
 joblib.dump(X_new, "Models/X_new.pkl")
+
 #----------------------------------------------------------------------------
-# Sequential Feature Selection                          
-#----------------------------------------------------------------------------
+#                   Sequential Feature Selection                          
 
 params = dict(tree_method="exact", 
                 eval_metric='mlogloss',
@@ -90,6 +98,40 @@ plt.hist(raFo.feature_importances_, bins=100)
 
 print(f"Original X shape: {X.shape}")
 print(f"Feature selected X_new shape: {X_new.shape}")
+
+
+#----------------------------------------------------------------------------
+#                       Evolutionary Algorythm Feature selection
+
+clf_RF = RandomForestClassifier(random_state=4)
+
+evolved_estimator = GAFeatureSelectionCV(
+    estimator   = clf_RF,
+    cv          = 5,
+    population_size=30, 
+    generations =40,
+    crossover_probability=0.8,
+    mutation_probabilityfloat = 0.1
+    n_jobs      =-1,
+    scoring     = "accuracy",)
+
+# Train and select the features
+evolved_estimator.fit(X_train, y_train)
+
+# Features selected by the algorithm
+features = evolved_estimator.best_features_
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Visualize feature importance
 
@@ -107,3 +149,5 @@ ax.set_ylabel("Mean decrease in impurity")
 ax.get_xaxis().set_visible(False)
 fig.tight_layout()
 plt.show()
+
+                                               
