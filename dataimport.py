@@ -19,5 +19,5 @@ class Dataimport: # class that imports two csv files (data and metadata)
         return tidyMer[["R.FileName", "uniprot", "meanAbu", "Cancer"]]
 
 # use as follows:                               data = Dataimport("rawData/tidy.csv","rawData/Metadata.csv")
-# to reassign the dataframe produced, use:      dataframe = data.dataframe()
+# to reassign the dataframe produced, use:      df = data.dataframe()
 # and you can have a look at the dataframe:     print(dataframe)
