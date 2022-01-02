@@ -8,6 +8,9 @@ In this chapter the model is optimized by hyperparameter tuning. A random grid s
 #params = clf_RF.get_params()
 #params
 
+#----------------------------------------------------------------------------
+                            #Jonathan                            
+#----------------------------------------------------------------------------
 #Define hyperparameters for tuning
 n_estimators_RF = [int(x) for x in np.linspace(start=200, stop=2000, num=10)] #number of trees
 max_features_RF = ['auot', 'sqrt'] #number of features
@@ -57,6 +60,11 @@ params
 #get model parameters(delete after hyperparameter tuning)
 params = clf_XGRF.get_params()
 params
+
+
+#----------------------------------------------------------------------------
+                            #Kevin                        
+#----------------------------------------------------------------------------
 
 clf_RF = RandomForestClassifier()
 # second try hyperparameter tuning

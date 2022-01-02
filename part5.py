@@ -3,15 +3,20 @@
 
 """
 
-# import already trained model
+# import already trained model if needed
 
 clf_RF = joblib.load("Models/clf_RF_X_new.pkl")
 clf_XGRF = joblib.load("Models/clf_XGRF_X_new.pkl")
 
-#Ranadom forest
 
 #split
 X_train, X_test, y_train, y_test = train_test_split(X_new, y, test_size=0.3, random_state=4)
+
+joblib.dump([X_train, X_test, y_train, y_test], "Models/X_y_split.pkl")
+
+
+#Ranadom forest
+
 clf_RF = RandomForestClassifier(random_state=1)
 clf_RF.fit(X_train ,y_train)
 y_RFpred = clf_RF.predict(X_test)

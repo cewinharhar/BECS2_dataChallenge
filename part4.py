@@ -41,7 +41,11 @@ X = joblib.load("Models/X.pkl")
     * May be used with xgboost
 """
 
-# Tree Feature Selection 
+
+#----------------------------------------------------------------------------
+# Tree Feature Selection                          
+#----------------------------------------------------------------------------
+ 
 
 """
 Can be used in pipeline
@@ -68,8 +72,10 @@ X_new = model.transform(X)
 print(f"Original X shape: {X.shape}")
 print(f"Feature selected X_new shape: {X_new.shape}")
 
-
-# sequential Feature Selection 
+joblib.dump(X_new, "Models/X_new.pkl")
+#----------------------------------------------------------------------------
+# Sequential Feature Selection                          
+#----------------------------------------------------------------------------
 
 params = dict(tree_method="exact", 
                 eval_metric='mlogloss',
