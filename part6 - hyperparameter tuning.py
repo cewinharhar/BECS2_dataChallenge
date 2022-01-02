@@ -119,6 +119,8 @@ clf_RF.fit(X_train, y_train)
 
 y_RFpred = clf_RF.predict(X_test)
 
+joblib.dump(clf_RF, "Models/clf_RF_hypertuned.pkl")
+
 # Model Accuracy, how often is the classifier correct?\n,
 print("Accuracy Random Forest: ",metrics.accuracy_score(y_test , y_RFpred))
 print(classification_report(y_test, y_RFpred))
