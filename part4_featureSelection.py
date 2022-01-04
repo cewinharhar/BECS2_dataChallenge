@@ -21,6 +21,8 @@ from sklearn.feature_selection import SelectFromModel
 from sklearn.feature_selection import SequentialFeatureSelector 
 from sklearn.metrics import classification_report, accuracy_score
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+import xgboost
+import matplotlib.pyplot as plt
 import joblib
 from sklearn_genetic import GAFeatureSelectionCV
 import part1
@@ -88,12 +90,12 @@ plt.ylabel("Count")
 
 #get the reduced X
 model = SelectFromModel(estimator = raFo, prefit=True,)
-X_new = model.transform(X)
+X_RF = model.transform(X)
 
 print(f"Original X shape: {X.shape}")
-print(f"Feature selected X_new shape: {X_new.shape}")
+print(f"Feature selected X_new shape: {X_RF.shape}")
 
-joblib.dump(X_new, "Models/X_new.pkl")
+joblib.dump(X_RF, "Models/X_RF.pkl")
 
 #----------------------------------------------------------------------------
 #            Random Forest: Evolutionary Algorythm Feature selection
@@ -117,9 +119,9 @@ evolved_estimator.fit(X, y)
 # Features selected by the algorithm
 features= evolved_estimator.best_features_
 
-X_GA    = X[:, features]
+X_RFGA    = X[:, features]
 
-joblib.dump(X_GA, "Models/X_GA.pkl")
+joblib.dump(X_RFGA, "Models/X_GA.pkl")
 
 #----------------------------------------------------------------------------
 #                   XGboost:  Feature Selection                          
@@ -131,26 +133,55 @@ params = dict(tree_method="exact",
 clf_XGRF = xgboost.XGBClassifier(random_state=0, **params)
 clf_XGRF.fit(X,y)
 
-tresh = np.linspace(start=0.05, stop=0.3, num=10)
-for tre in tresh:
-
-    model = SelectFromModel(estimator = clf_XGRF, n_jobs=-1, treshhold = tre)
-    model.fit(X,y)
-
-X_new = model.transform(X)
-
 #checkout importance in a histogram
-plt.hist(raFo.feature_importances_, bins=100)
+plt.hist(clf_XGRF.feature_importances_, bins=100)
+plt.title("Histogram of the feature importance for all 2730 proteins")
+plt.xlabel("Importance")
+plt.ylabel("Count")
+
+selector = SelectFromModel(estimator = clf_XGRF)
+selector.fit(X,y)
+
+X_XG = selector.transform(X)
 
 print(f"Original X shape: {X.shape}")
-print(f"Feature selected X_new shape: {X_new.shape}")
+print(f"Feature selected X_new shape: {X_XG.shape}")
 
+joblib.dump(X_XG, "Models/X_XG.pkl")
 
+#----------------------------------------------------------------------------
+#                   XGboost:  Evolutionary Algorythm Feature selection                          
 
+params = dict(tree_method="exact", 
+                eval_metric='mlogloss',
+                use_label_encoder =False)
 
+clf_XGRF = xgboost.XGBClassifier(random_state=0, **params)
+clf_XGRF.fit(X,y)
 
+evolved_estimator = GAFeatureSelectionCV(
+    estimator           = clf_XGRF,
+    cv                  = None,
+    population_size     =10, 
+    generations         =50,
+    crossover_probability=0.8,
+    mutation_probability= 0.1,
+    n_jobs              = -1,
+    scoring             = "accuracy")
 
-# Visualize feature importance
+# Train and select the features
+evolved_estimator.fit(X, y)
+
+# Features selected by the algorithm
+features= evolved_estimator.best_features_
+
+X_RFGA    = X[:, features]
+
+joblib.dump(X_RFGA, "Models/X_GA.pkl")
+
+#----------------------------------------------------------------------------
+#                   # Visualize feature importance
+
 
 importances = raFo.feature_importances_
 
