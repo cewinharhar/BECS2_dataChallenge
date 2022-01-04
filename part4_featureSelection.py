@@ -65,8 +65,7 @@ X = joblib.load("Models/X.pkl")
 
 
 #----------------------------------------------------------------------------
-#                        Tree Feature Selection                          
-
+#                        Random Forest: Tree Feature Selection                          
 
 """
 Can be used in pipeline
@@ -76,7 +75,8 @@ clf = Pipeline([
 ])
 """
 #create Random Forest classifier with default hyperparameters
-raFo = RandomForestClassifier(random_state=4)
+params  = {'n_estimators': 114, 'min_samples_split': 2, 'max_features': 'auto', 'max_depth': 18, 'bootstrap': False}
+raFo = RandomForestClassifier(random_state=0, **params)
 raFo = raFo.fit(X, y)
 
 #checkout importance in a histogram
@@ -87,7 +87,7 @@ plt.ylabel("Count")
 
 
 #get the reduced X
-model = SelectFromModel(estimator = raFo, prefit=True)
+model = SelectFromModel(estimator = raFo, prefit=True,)
 X_new = model.transform(X)
 
 print(f"Original X shape: {X.shape}")
@@ -96,38 +96,19 @@ print(f"Feature selected X_new shape: {X_new.shape}")
 joblib.dump(X_new, "Models/X_new.pkl")
 
 #----------------------------------------------------------------------------
-#                   Sequential Feature Selection                          
+#            Random Forest: Evolutionary Algorythm Feature selection
 
-params = dict(tree_method="exact", 
-                eval_metric='mlogloss',
-                use_label_encoder =False)
-
-clf_XGRF = xgboost.XGBClassifier(random_state=7, **params)
-model = SequentialFeatureSelector(estimator = clf_XGRF, n_features_to_select = 0.20, cv = 10,  n_jobs=-1)
-model.fit(X,y)
-
-X_new = model.transform(X)
-
-#checkout importance in a histogram
-plt.hist(raFo.feature_importances_, bins=100)
-
-print(f"Original X shape: {X.shape}")
-print(f"Feature selected X_new shape: {X_new.shape}")
-
-
-#----------------------------------------------------------------------------
-#                       Evolutionary Algorythm Feature selection
-
-clf_RF = RandomForestClassifier(random_state=4)
+params  = {'n_estimators': 114, 'min_samples_split': 2, 'max_features': 'auto', 'max_depth': 18, 'bootstrap': False}
+clf_RF    = RandomForestClassifier(random_state=0, **params)
 
 evolved_estimator = GAFeatureSelectionCV(
     estimator   = clf_RF,
-    cv          = 5,
-    population_size=30, 
-    generations =40,
+    cv          = None,
+    population_size=100, 
+    generations =500,
     crossover_probability=0.8,
-    mutation_probability = 0.1,
-    n_jobs      =-1,
+    mutation_probability = 0.2,
+    n_jobs      = -1,
     scoring     = "accuracy")
 
 # Train and select the features
@@ -139,6 +120,33 @@ features= evolved_estimator.best_features_
 X_GA    = X[:, features]
 
 joblib.dump(X_GA, "Models/X_GA.pkl")
+
+#----------------------------------------------------------------------------
+#                   XGboost:  Feature Selection                          
+
+params = dict(tree_method="exact", 
+                eval_metric='mlogloss',
+                use_label_encoder =False)
+
+clf_XGRF = xgboost.XGBClassifier(random_state=0, **params)
+clf_XGRF.fit(X,y)
+
+tresh = np.linspace(start=0.05, stop=0.3, num=10)
+for tre in tresh:
+
+    model = SelectFromModel(estimator = clf_XGRF, n_jobs=-1, treshhold = tre)
+    model.fit(X,y)
+
+X_new = model.transform(X)
+
+#checkout importance in a histogram
+plt.hist(raFo.feature_importances_, bins=100)
+
+print(f"Original X shape: {X.shape}")
+print(f"Feature selected X_new shape: {X_new.shape}")
+
+
+
 
 
 
