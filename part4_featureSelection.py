@@ -104,10 +104,10 @@ clf_RF    = RandomForestClassifier(random_state=0, **params)
 evolved_estimator = GAFeatureSelectionCV(
     estimator   = clf_RF,
     cv          = None,
-    population_size=100, 
-    generations =500,
+    population_size=20, 
+    generations =40,
     crossover_probability=0.8,
-    mutation_probability = 0.2,
+    mutation_probability = 0.15,
     n_jobs      = -1,
     scoring     = "accuracy")
 
@@ -117,9 +117,10 @@ evolved_estimator.fit(X, y)
 # Features selected by the algorithm
 features= evolved_estimator.best_features_
 
-X_GA    = X[:, features]
+X_RFGA    = X[:, features]
 
-joblib.dump(X_GA, "Models/X_GA.pkl")
+joblib.dump(X_RFGA, "Models/X_RFGA.pkl")
+joblib.dump(features, "Models/featSel_RFGA.pkl")
 
 #----------------------------------------------------------------------------
 #                   XGboost:  Feature Selection                          
