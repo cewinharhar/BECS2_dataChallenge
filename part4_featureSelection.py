@@ -163,10 +163,10 @@ clf_XGRF.fit(X,y)
 evolved_estimator = GAFeatureSelectionCV(
     estimator           = clf_XGRF,
     cv                  = None,
-    population_size     =10, 
-    generations         =50,
-    crossover_probability=0.8,
-    mutation_probability= 0.1,
+    population_size     = 25, 
+    generations         = 40,
+    crossover_probability=0.85,
+    mutation_probability= 0.15,
     n_jobs              = -1,
     scoring             = "accuracy")
 
@@ -176,9 +176,10 @@ evolved_estimator.fit(X, y)
 # Features selected by the algorithm
 features= evolved_estimator.best_features_
 
-X_RFGA    = X[:, features]
+X_XGGA    = X[:, features]
 
-joblib.dump(X_RFGA, "Models/X_GA.pkl")
+joblib.dump(X_XGGA, "Models/X_XGGA.pkl")
+joblib.dump(features, "Models/featSel_XGGA.pkl")
 
 #----------------------------------------------------------------------------
 #                   # Visualize feature importance
