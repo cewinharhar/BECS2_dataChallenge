@@ -77,9 +77,8 @@ clf = Pipeline([
 ])
 """
 #create Random Forest classifier with default hyperparameters
-params  = {'n_estimators': 114, 'min_samples_split': 2, 'max_features': 'auto', 'max_depth': 18, 'bootstrap': False}
-raFo = RandomForestClassifier(random_state=0, **params)
-raFo = raFo.fit(X, y)
+#params  = {'n_estimators': 114, 'min_samples_split': 2, 'max_features': 'auto', 'max_depth': 18, 'bootstrap': False}
+raFo = RandomForestClassifier(random_state=0)
 
 #checkout importance in a histogram
 plt.hist(raFo.feature_importances_, bins=100)
@@ -89,12 +88,15 @@ plt.ylabel("Count")
 
 
 #get the reduced X
-model = SelectFromModel(estimator = raFo, prefit=True,)
+model = SelectFromModel(estimator = raFo, prefit=False)
+model.fit(X,y)
+
 X_RF = model.transform(X)
 
 print(f"Original X shape: {X.shape}")
 print(f"Feature selected X_new shape: {X_RF.shape}")
 
+joblib.dump(model.get_support(), "Models/featSel_RF.pkl")
 joblib.dump(X_RF, "Models/X_RF.pkl")
 
 #----------------------------------------------------------------------------
@@ -132,7 +134,7 @@ params = dict(tree_method="exact",
                 use_label_encoder =False)
 
 clf_XGRF = xgboost.XGBClassifier(random_state=0, **params)
-clf_XGRF.fit(X,y)
+
 
 #checkout importance in a histogram
 plt.hist(clf_XGRF.feature_importances_, bins=100)
@@ -140,15 +142,15 @@ plt.title("Histogram of the feature importance for all 2730 proteins")
 plt.xlabel("Importance")
 plt.ylabel("Count")
 
-selector = SelectFromModel(estimator = clf_XGRF)
+selector = SelectFromModel(estimator = clf_XGRF, prefit=False)
 selector.fit(X,y)
-
 X_XG = selector.transform(X)
 
 print(f"Original X shape: {X.shape}")
 print(f"Feature selected X_new shape: {X_XG.shape}")
 
 joblib.dump(X_XG, "Models/X_XG.pkl")
+joblib.dump(selector.get_support(), "Models/featSel_XG.pkl")
 
 #----------------------------------------------------------------------------
 #                   XGboost:  Evolutionary Algorythm Feature selection                          
