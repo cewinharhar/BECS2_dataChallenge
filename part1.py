@@ -1,5 +1,5 @@
 #import necessary packages
-import os
+import os 
 import random
 import xgboost
 import joblib
@@ -20,6 +20,8 @@ from sklearn.feature_selection import SelectFromModel
 from sklearn.feature_selection import SequentialFeatureSelector 
 from sklearn.metrics import classification_report, accuracy_score
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+
+from sklearn_genetic import GAFeatureSelectionCV
 
 os.getcwd()
 """

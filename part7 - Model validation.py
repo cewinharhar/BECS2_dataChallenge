@@ -1,4 +1,4 @@
-"""
+""" 
 ## Part 7: Model Validation
 """
 clf_RF = joblib.load("Models/clf_RF_hypertuned_selFeature.pkl")
