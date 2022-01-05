@@ -5,7 +5,7 @@ clf_RF = joblib.load("Models/clf_RF_hypertuned_selFeature.pkl")
 
 clf_XBRF = joblib.load("Models/clf_XGRF_X_new.pkl")
 
-# visualize confusion matrix
+# visualize confusion matrix 
 
 cm = confusion_matrix(y_test, y_RFpred, labels=clf_RF.classes_) # calculate value
 disp = ConfusionMatrixDisplay(confusion_matrix=cm,              # display
