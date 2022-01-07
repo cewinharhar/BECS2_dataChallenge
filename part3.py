@@ -4,10 +4,11 @@ In this section the raw data is prepared and reshaped to be fed into the differe
 
 """
 import pandas as pd
-
+import numpy as np
+import matplotlib.pyplot as plt
 #create pandas dataframe
-path = "tidy.csv"
-pathMet = "metadata.csv"
+path = "./RawData/tidy.csv"
+pathMet = "./RawData/metadata.csv"
 tidy = pd.read_csv(path, sep=",")
 tidyMet = pd.read_csv(pathMet, sep=";", index_col=0)
 
