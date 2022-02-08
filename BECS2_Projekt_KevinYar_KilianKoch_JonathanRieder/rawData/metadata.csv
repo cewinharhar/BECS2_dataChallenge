@@ -1,0 +1,183 @@
+R.FileName;Cancer;Gender;Ethnicity;Stage;Stratum
+J_D201211_MDIA_P705_SExp01-BGSID-1_R01;Lung Cancer;Female;White;Early;Lung Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-10_R01;Lung Cancer;Female;White;Early;Lung Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-100_R01;Pancreatic Cancer;Female;White;Early;Pancreatic Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-101_R01;Colorectal Cancer;Male;White;Late;Colorectal Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-102_R01;Lung Cancer;Female;White;Early;Lung Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-103_R01;Pancreatic Cancer;Female;White;Early;Pancreatic Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-104_R01;Breast Cancer;Female;White;Early;Breast Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-105_R01;Healthy;Male;White;Healthy;Healthy+Healthy+Male
+J_D201211_MDIA_P705_SExp01-BGSID-106_R01;Pancreatic Cancer;Male;White;Late;Pancreatic Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-107_R01;Lung Cancer;Male;White;Early;Lung Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-108_R01;Colorectal Cancer;Female;White;Late;Colorectal Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-109_R01;Healthy;Male;White;Healthy;Healthy+Healthy+Male
+J_D201211_MDIA_P705_SExp01-BGSID-11_R01;Pancreatic Cancer;Female;White;Late;Pancreatic Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-110_R01;Breast Cancer;Female;Black;Late;Breast Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-111_R01;Prostate Cancer;Male;White;Late;Prostate Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-112_R01;Breast Cancer;Female;White;Late;Breast Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-113_R01;Colorectal Cancer;Female;White;Early;Colorectal Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-114_R01;Healthy;Male;White;Healthy;Healthy+Healthy+Male
+J_D201211_MDIA_P705_SExp01-BGSID-115_R01;Pancreatic Cancer;Female;White;Late;Pancreatic Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-116_R01;Lung Cancer;Male;White;Early;Lung Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-117_R01;Prostate Cancer;Male;White;Early;Prostate Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-118_R01;Breast Cancer;Female;White;Late;Breast Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-119_R01;Healthy;Female;White;Healthy;Healthy+Healthy+Female
+J_D201211_MDIA_P705_SExp01-BGSID-12_R01;Lung Cancer;Female;White;Late;Lung Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-13_R01;Healthy;Male;White;Healthy;Healthy+Healthy+Male
+J_D201211_MDIA_P705_SExp01-BGSID-14_R01;Healthy;Female;White;Healthy;Healthy+Healthy+Female
+J_D201211_MDIA_P705_SExp01-BGSID-15_R01;Colorectal Cancer;Female;White;Late;Colorectal Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-16_R01;Prostate Cancer;Male;White;Late;Prostate Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-17_R01;Healthy;Female;White;Healthy;Healthy+Healthy+Female
+J_D201211_MDIA_P705_SExp01-BGSID-18_R01;Lung Cancer;Male;White;Late;Lung Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-19_R01;Pancreatic Cancer;Male;White;Late;Pancreatic Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-2_R01;Colorectal Cancer;Female;White;Late;Colorectal Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-20_R01;Breast Cancer;Female;White;Early;Breast Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-21_R01;Healthy;Male;White;Healthy;Healthy+Healthy+Male
+J_D201211_MDIA_P705_SExp01-BGSID-22_R01;Prostate Cancer;Male;White;Early;Prostate Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-23_R01;Lung Cancer;Male;White;Late;Lung Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-24_R01;Prostate Cancer;Male;White;Early;Prostate Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-25_R01;Breast Cancer;Female;White;Early;Breast Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-26_R01;Pancreatic Cancer;Female;White;Early;Pancreatic Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-27_R01;Colorectal Cancer;Female;White;Early;Colorectal Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-28_R01;Colorectal Cancer;Male;White;Early;Colorectal Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-29_R01;Breast Cancer;Female;Black;Early;Breast Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-3_R01;Breast Cancer;Female;Black;Early;Breast Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-30_R01;Healthy;Female;White;Healthy;Healthy+Healthy+Female
+J_D201211_MDIA_P705_SExp01-BGSID-31_R01;Pancreatic Cancer;Female;White;Late;Pancreatic Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-32_R01;Colorectal Cancer;Male;White;Late;Colorectal Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-33_R01;Prostate Cancer;Male;White;Early;Prostate Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-34_R01;Breast Cancer;Female;Black;Late;Breast Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-35_R01;Prostate Cancer;Male;White;Late;Prostate Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-36_R01;Pancreatic Cancer;Male;White;Late;Pancreatic Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-37_R01;Healthy;Male;White;Healthy;Healthy+Healthy+Male
+J_D201211_MDIA_P705_SExp01-BGSID-38_R01;Prostate Cancer;Male;White;Late;Prostate Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-39_R01;Colorectal Cancer;Male;White;Early;Colorectal Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-4_R01;Breast Cancer;Female;White;Early;Breast Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-40_R01;Lung Cancer;Female;White;Late;Lung Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-41_R01;Pancreatic Cancer;Female;White;Early;Pancreatic Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-42_R01;Healthy;Female;White;Healthy;Healthy+Healthy+Female
+J_D201211_MDIA_P705_SExp01-BGSID-43_R01;Prostate Cancer;Male;White;Late;Prostate Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-44_R01;Pancreatic Cancer;Female;White;Early;Pancreatic Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-45_R01;Pancreatic Cancer;Female;White;Early;Pancreatic Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-46_R01_X01;Breast Cancer;Female;Black;Late;Breast Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-47_R01;Pancreatic Cancer;Male;White;Late;Pancreatic Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-48_R01;Prostate Cancer;Male;White;Early;Prostate Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-49_R01;Breast Cancer;Female;Black;Late;Breast Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-5_R01;Pancreatic Cancer;Male;White;Early;Pancreatic Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-50_R01;Prostate Cancer;Male;White;Late;Prostate Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-51_R01;Healthy;Male;White;Healthy;Healthy+Healthy+Male
+J_D201211_MDIA_P705_SExp01-BGSID-52_R01;Healthy;Male;White;Healthy;Healthy+Healthy+Male
+J_D201211_MDIA_P705_SExp01-BGSID-53_R01;Breast Cancer;Female;White;Late;Breast Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-54_R01;Colorectal Cancer;Female;White;Late;Colorectal Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-55_R01;Prostate Cancer;Male;White;Early;Prostate Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-56_R01;Pancreatic Cancer;Male;White;Late;Pancreatic Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-57_R01;Healthy;Female;Black;Healthy;Healthy+Healthy+Female
+J_D201211_MDIA_P705_SExp01-BGSID-58_R01;Colorectal Cancer;Female;White;Early;Colorectal Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-59_R01;Lung Cancer;Male;White;Early;Lung Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-6_R01;Breast Cancer;Female;Black;Late;Breast Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-60_R01;Breast Cancer;Female;White;Early;Breast Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-61_R01;Breast Cancer;Female;White;Late;Breast Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-62_R01;Lung Cancer;Male;White;Late;Lung Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-63_R01;Prostate Cancer;Male;White;Early;Prostate Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-64_R01;Colorectal Cancer;Female;White;Late;Colorectal Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-65_R01;Prostate Cancer;Male;White;Early;Prostate Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-66_R01;Colorectal Cancer;Female;White;Late;Colorectal Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-67_R01;Lung Cancer;Male;White;Late;Lung Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-68_R01;Colorectal Cancer;Male;White;Early;Colorectal Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-69_R01;Breast Cancer;Female;Black;Early;Breast Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-7_R01;Colorectal Cancer;Female;White;Early;Colorectal Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-70_R01;Pancreatic Cancer;Male;White;Early;Pancreatic Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-71_R01;Healthy;Female;White;Healthy;Healthy+Healthy+Female
+J_D201211_MDIA_P705_SExp01-BGSID-72_R01;Pancreatic Cancer;Male;White;Early;Pancreatic Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-73_R01;Lung Cancer;Female;White;Early;Lung Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-74_R01;Colorectal Cancer;Female;White;Early;Colorectal Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-75_R01;Healthy;Female;Black;Healthy;Healthy+Healthy+Female
+J_D201211_MDIA_P705_SExp01-BGSID-76_R01;Lung Cancer;Male;White;Early;Lung Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-77_R01;Breast Cancer;Female;Black;Early;Breast Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-78_R01;Breast Cancer;Female;White;Early;Breast Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-79_R01;Colorectal Cancer;Male;White;Late;Colorectal Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-8_R01;Colorectal Cancer;Male;White;Late;Colorectal Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-80_R01;Healthy;Female;White;Healthy;Healthy+Healthy+Female
+J_D201211_MDIA_P705_SExp01-BGSID-81_R01;Prostate Cancer;Male;White;Late;Prostate Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-82_R01;Prostate Cancer;Male;White;Early;Prostate Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-83_R01;Lung Cancer;Female;White;Early;Lung Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-84_R01;Prostate Cancer;Male;White;Late;Prostate Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-85_R01;Lung Cancer;Female;White;Late;Lung Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-86_R01;Colorectal Cancer;Male;White;Early;Colorectal Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-87_R01;Lung Cancer;Female;White;Late;Lung Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-88_R01;Pancreatic Cancer;Female;White;Early;Pancreatic Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-89_R01;Healthy;Male;White;Healthy;Healthy+Healthy+Male
+J_D201211_MDIA_P705_SExp01-BGSID-9_R01;Lung Cancer;Male;White;Early;Lung Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-90_R01;Pancreatic Cancer;Male;White;Late;Pancreatic Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-91_R01;Colorectal Cancer;Female;White;Early;Colorectal Cancer+Early+Female
+J_D201211_MDIA_P705_SExp01-BGSID-92_R01;Pancreatic Cancer;Male;White;Late;Pancreatic Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-93_R01;Lung Cancer;Female;White;Late;Lung Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-94_R01;Prostate Cancer;Male;White;Late;Prostate Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-95_R01;Healthy;Female;Black;Healthy;Healthy+Healthy+Female
+J_D201211_MDIA_P705_SExp01-BGSID-96_R01;Prostate Cancer;Male;White;Early;Prostate Cancer+Early+Male
+J_D201211_MDIA_P705_SExp01-BGSID-97_R01;Prostate Cancer;Male;White;Late;Prostate Cancer+Late+Male
+J_D201211_MDIA_P705_SExp01-BGSID-98_R01;Breast Cancer;Female;White;Late;Breast Cancer+Late+Female
+J_D201211_MDIA_P705_SExp01-BGSID-99_R01;Healthy;Male;White;Healthy;Healthy+Healthy+Male
+J_D210105_MDIA_P705_SExp01-BGSID-120_R01;Lung Cancer;Male;White;Late;Lung Cancer+Late+Male
+J_D210105_MDIA_P705_SExp01-BGSID-121_R01;Lung Cancer;Female;White;Early;Lung Cancer+Early+Female
+J_D210105_MDIA_P705_SExp01-BGSID-122_R01;Healthy;Female;White;Healthy;Healthy+Healthy+Female
+J_D210105_MDIA_P705_SExp01-BGSID-123_R01;Breast Cancer;Female;White;Late;Breast Cancer+Late+Female
+J_D210105_MDIA_P705_SExp01-BGSID-124_R01;Colorectal Cancer;Male;White;Late;Colorectal Cancer+Late+Male
+J_D210105_MDIA_P705_SExp01-BGSID-125_R01;Pancreatic Cancer;Male;White;Early;Pancreatic Cancer+Early+Male
+J_D210105_MDIA_P705_SExp01-BGSID-126_R01;Lung Cancer;Male;White;Early;Lung Cancer+Early+Male
+J_D210105_MDIA_P705_SExp01-BGSID-127_R01;Pancreatic Cancer;Female;White;Late;Pancreatic Cancer+Late+Female
+J_D210105_MDIA_P705_SExp01-BGSID-128_R01;Healthy;Male;White;Healthy;Healthy+Healthy+Male
+J_D210105_MDIA_P705_SExp01-BGSID-129_R01;Breast Cancer;Female;White;Late;Breast Cancer+Late+Female
+J_D210105_MDIA_P705_SExp01-BGSID-130_R01;Lung Cancer;Female;White;Late;Lung Cancer+Late+Female
+J_D210105_MDIA_P705_SExp01-BGSID-131_R01;Lung Cancer;Male;White;Early;Lung Cancer+Early+Male
+J_D210105_MDIA_P705_SExp01-BGSID-132_R01;Lung Cancer;Male;White;Late;Lung Cancer+Late+Male
+J_D210105_MDIA_P705_SExp01-BGSID-133_R01;Prostate Cancer;Male;White;Early;Prostate Cancer+Early+Male
+J_D210105_MDIA_P705_SExp01-BGSID-134_R01;Healthy;Female;Black;Healthy;Healthy+Healthy+Female
+J_D210105_MDIA_P705_SExp01-BGSID-135_R01;Colorectal Cancer;Male;White;Late;Colorectal Cancer+Late+Male
+J_D210105_MDIA_P705_SExp01-BGSID-136_R01;Colorectal Cancer;Female;White;Late;Colorectal Cancer+Late+Female
+J_D210105_MDIA_P705_SExp01-BGSID-137_R01;Prostate Cancer;Male;White;Early;Prostate Cancer+Early+Male
+J_D210105_MDIA_P705_SExp01-BGSID-138_R01;Healthy;Female;Black;Healthy;Healthy+Healthy+Female
+J_D210105_MDIA_P705_SExp01-BGSID-139_R01;Prostate Cancer;Male;White;Late;Prostate Cancer+Late+Male
+J_D210105_MDIA_P705_SExp01-BGSID-140_R01;Pancreatic Cancer;Male;White;Early;Pancreatic Cancer+Early+Male
+J_D210105_MDIA_P705_SExp01-BGSID-141_R01;Colorectal Cancer;Female;White;Late;Colorectal Cancer+Late+Female
+J_D210105_MDIA_P705_SExp01-BGSID-142_R01;Pancreatic Cancer;Female;White;Early;Pancreatic Cancer+Early+Female
+J_D210105_MDIA_P705_SExp01-BGSID-143_R01;Healthy;Male;White;Healthy;Healthy+Healthy+Male
+J_D210105_MDIA_P705_SExp01-BGSID-144_R01;Breast Cancer;Female;Black;Late;Breast Cancer+Late+Female
+J_D210105_MDIA_P705_SExp01-BGSID-145_R01;Pancreatic Cancer;Female;White;Early;Pancreatic Cancer+Early+Female
+J_D210105_MDIA_P705_SExp01-BGSID-146_R01;Prostate Cancer;Male;White;Late;Prostate Cancer+Late+Male
+J_D210105_MDIA_P705_SExp01-BGSID-148_R01;Prostate Cancer;Male;White;Late;Prostate Cancer+Late+Male
+J_D210105_MDIA_P705_SExp01-BGSID-149_R01;Pancreatic Cancer;Male;White;Late;Pancreatic Cancer+Late+Male
+J_D210105_MDIA_P705_SExp01-BGSID-150_R01;Colorectal Cancer;Female;White;Early;Colorectal Cancer+Early+Female
+J_D210105_MDIA_P705_SExp01-BGSID-151_R01;Colorectal Cancer;Male;White;Early;Colorectal Cancer+Early+Male
+J_D210105_MDIA_P705_SExp01-BGSID-152_R01;Breast Cancer;Female;White;Late;Breast Cancer+Late+Female
+J_D210105_MDIA_P705_SExp01-BGSID-153_R01;Breast Cancer;Female;Black;Early;Breast Cancer+Early+Female
+J_D210105_MDIA_P705_SExp01-BGSID-154_R01;Breast Cancer;Female;Black;Late;Breast Cancer+Late+Female
+J_D210105_MDIA_P705_SExp01-BGSID-155_R01;Lung Cancer;Male;White;Early;Lung Cancer+Early+Male
+J_D210105_MDIA_P705_SExp01-BGSID-156_R01;Colorectal Cancer;Female;White;Late;Colorectal Cancer+Late+Female
+J_D210105_MDIA_P705_SExp01-BGSID-157_R01;Breast Cancer;Female;White;Early;Breast Cancer+Early+Female
+J_D210105_MDIA_P705_SExp01-BGSID-158_R01;Lung Cancer;Male;White;Late;Lung Cancer+Late+Male
+J_D210105_MDIA_P705_SExp01-BGSID-159_R01;Colorectal Cancer;Female;White;Early;Colorectal Cancer+Early+Female
+J_D210105_MDIA_P705_SExp01-BGSID-160_R01;Prostate Cancer;Male;White;Early;Prostate Cancer+Early+Male
+J_D210105_MDIA_P705_SExp01-BGSID-161_R01;Lung Cancer;Female;White;Late;Lung Cancer+Late+Female
+J_D210105_MDIA_P705_SExp01-BGSID-162_R01;Breast Cancer;Female;Black;Early;Breast Cancer+Early+Female
+J_D210105_MDIA_P705_SExp01-BGSID-162_R01_X01;Breast Cancer;Female;Black;Early;Breast Cancer+Early+Female
+J_D210105_MDIA_P705_SExp01-BGSID-163_R01;Healthy;Male;White;Healthy;Healthy+Healthy+Male
+J_D210105_MDIA_P705_SExp01-BGSID-164_R01;Healthy;Female;Black;Healthy;Healthy+Healthy+Female
+J_D210105_MDIA_P705_SExp01-BGSID-165_R01;Prostate Cancer;Male;White;Early;Prostate Cancer+Early+Male
+J_D210105_MDIA_P705_SExp01-BGSID-166_R01;Pancreatic Cancer;Female;White;Early;Pancreatic Cancer+Early+Female
+J_D210105_MDIA_P705_SExp01-BGSID-167_R01;Prostate Cancer;Male;White;Late;Prostate Cancer+Late+Male
+J_D210105_MDIA_P705_SExp01-BGSID-168_R01;Lung Cancer;Female;White;Early;Lung Cancer+Early+Female
+J_D210105_MDIA_P705_SExp01-BGSID-169_R01;Pancreatic Cancer;Male;White;Late;Pancreatic Cancer+Late+Male
+J_D210105_MDIA_P705_SExp01-BGSID-170_R01;Prostate Cancer;Male;White;Late;Prostate Cancer+Late+Male
+J_D210105_MDIA_P705_SExp01-BGSID-171_R01;Colorectal Cancer;Male;White;Early;Colorectal Cancer+Early+Male
+J_D210105_MDIA_P705_SExp01-BGSID-172_R01_X01;Colorectal Cancer;Female;White;Early;Colorectal Cancer+Early+Female
+J_D210105_MDIA_P705_SExp01-BGSID-173_R01;Breast Cancer;Female;Black;Early;Breast Cancer+Early+Female
+J_D210105_MDIA_P705_SExp01-BGSID-174_R01;Lung Cancer;Female;White;Late;Lung Cancer+Late+Female
+J_D210105_MDIA_P705_SExp01-BGSID-175_R01;Pancreatic Cancer;Female;White;Late;Pancreatic Cancer+Late+Female
+J_D210105_MDIA_P705_SExp01-BGSID-176_R01;Pancreatic Cancer;Male;White;Late;Pancreatic Cancer+Late+Male
+J_D210105_MDIA_P705_SExp01-BGSID-177_R01;Breast Cancer;Female;White;Early;Breast Cancer+Early+Female
+J_D210105_MDIA_P705_SExp01-BGSID-178_R01;Prostate Cancer;Male;White;Early;Prostate Cancer+Early+Male
+J_D210105_MDIA_P705_SExp01-BGSID-178_R01_X01;Prostate Cancer;Male;White;Early;Prostate Cancer+Early+Male
+J_D210105_MDIA_P705_SExp01-BGSID-179_R01_X01;Healthy;Male;White;Healthy;Healthy+Healthy+Male
+J_D210105_MDIA_P705_SExp01-BGSID-180_R01_X01;Healthy;Female;Black;Healthy;Healthy+Healthy+Female
+J_D210111_MDIA_P705_SExp01-BGSID-147_R01_X01;Healthy;Male;White;Healthy;Healthy+Healthy+Male
